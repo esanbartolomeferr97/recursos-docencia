@@ -1,0 +1,116 @@
+\documentclass[a4paper,11pt]{article}
+
+% Importar preamble de prácticas
+\input{../../plantillas/preamble-practicas.tex}
+
+% Personalización de la asignatura
+\rhead{Electrónica}
+
+% -------------------------
+\begin{document}
+
+\begin{center}
+    \Huge \textbf{Práctica 1: Simulación y montaje de circuitos básicos.} \\[0.5cm]
+\end{center}
+
+\noindent \large Fecha: \\
+\large Nombre alumno:\\
+
+\begin{tcolorbox}[mybox, title=Ejercicio 1]
+Utiliza Tinkercad como software de simulación electrónica y realiza el diseño de 3 resistencias en serie como se muestra en la figura. Anota los siguientes resultados en la tabla:
+\end{tcolorbox}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/resistencias_serie.png}
+    \label{fig:resistencias_serie}
+\end{figure}
+
+\begin{table}[h!]
+    \Large
+    \centering
+    \begin{tabular}{ccccc}
+        \toprule
+        \textbf{Tensión de la fuente} & \textbf{I} & \textbf{$V_1$} & \textbf{$V_2$} & \textbf{$V_3$} \\
+        \midrule
+        5 V  &   &   &   &   \\
+        \midrule
+        9 V  &   &   &   &   \\
+        \midrule
+        12 V &   &   &   & \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:medidas_circuito_serie}
+\end{table}
+
+\begin{tcolorbox}[mybox, title=Ejercicio 2]
+Utiliza Tinkercad como software de simulación electrónica y realiza el diseño de 3 resistencias en paralelo y anota lo siguientes resultados:
+\end{tcolorbox}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/resistencias_paralelo.png}
+    \label{fig:resistencias_paralelo}
+\end{figure}
+
+\begin{table}[h!]
+    \Large
+    \centering
+    \begin{tabular}{cccccc}
+        \toprule
+        \textbf{Tensión de la fuente} & \textbf{$I_t$} & \textbf{$I_1$} & \textbf{$I_2$} & \textbf{$I_3$} & $V_1, V_2, V_3$ \\
+        \midrule
+        5 V  &   &   &   &  & \\
+        \midrule
+        9 V  &   &   &   &  & \\
+        \midrule
+        12 V &   &   &   & & \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:medidas_circuito_paralelo}
+\end{table}
+
+
+\begin{tcolorbox}[mybox, title=Ejercicio 3]
+Sobre una placa de prototipos, conecta en serie las tres resistencias del Ejercicio 1. Conecta el circuito a una fuente de alimentación de tensión variable y, utilizando un polímetro, anota en la tabla los resultados obtenidos en función del valor de tensión ajustado en la fuente.
+\end{tcolorbox}
+
+\begin{table}[h!]
+    \Large
+    \centering
+    \begin{tabular}{ccccc}
+        \toprule
+        \textbf{Tensión de la fuente} & \textbf{I} & \textbf{$V_1$} & \textbf{$V_2$} & \textbf{$V_3$} \\
+        \midrule
+        5 V  &   &   &   &   \\
+        \midrule
+        9 V  &   &   &   &   \\
+        \midrule
+        12 V &   &   &   & \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:medidas_montaje_serie}
+\end{table}
+
+\begin{tcolorbox}[mybox, title=Ejercicio 4]
+Sobre una placa de prototipos monta tres resistencias en paralelo (Ejercicio 2) y, siguiendo el mismo procedimiento anterior anotad las medidas de corrientes y tensiones correspondientes y rellenad la tabla:
+\end{tcolorbox}
+
+\begin{table}[h!]
+    \Large
+    \centering
+    \begin{tabular}{cccccc}
+        \toprule
+        \textbf{Tensión de la fuente} & \textbf{$I_T$} & \textbf{$I_1$} & \textbf{$I_2$} & \textbf{$I_3$} & $V_1, V_2, V_3$ \\
+        \midrule
+        5 V  &   &   &   &  & \\
+        \midrule
+        9 V  &   &   &   &  & \\
+        \midrule
+        12 V &   &   &   & & \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:medidas_montaje_paralelo}
+\end{table}
+
+\end{document}

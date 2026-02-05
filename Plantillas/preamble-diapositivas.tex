@@ -8,6 +8,7 @@
 \usepackage{pgfplots}
 \usepackage{circuitikz}[americanresistors]
 \usepackage{siunitx}
+\usepackage{multicol} % Añade esto en el preámbulo si no lo tienes
 
 % --- Tema y configuración de Beamer ---
 \usetheme{Madrid}
@@ -22,12 +23,24 @@
 \setbeamertemplate{section in toc}[sections numbered]
 \setbeamertemplate{subsection in toc}[subsections numbered]
 
-% --- Mostrar índice al inicio de cada subsección ---
-\AtBeginSubsection[]{
+% --- Mostrar índice al inicio de cada sección ---
+\AtBeginSection[]{
   \begin{frame}{Índice}
     \tableofcontents[
       currentsection,
-      currentsubsection
+      currentsubsection,
+      hideothersubsections
     ]
   \end{frame}
 }
+
+% --- Mostrar índice al inicio de cadaa subsección ---
+%\AtBeginSubsection[]{
+%  \begin{frame}{Índice}
+%    \tableofcontents[
+%      currentsection,
+%      currentsubsection,
+%      hideothersubsections
+%    ]
+%  \end{frame}
+%}

@@ -1,0 +1,210 @@
+\documentclass[aspectratio=169, 12pt]{beamer}
+
+% Importar preamble de prácticas
+\input{../../../Plantillas/preamble-diapositivas.tex}
+
+% --- Información diapositivas ---
+\title{Fabricación de una placa de circuito impreso para un reloj digital.}
+\titlegraphic{\includegraphics[width=0.25\linewidth]{img/Reloj_7segmentos_arduino_superior.png}}
+\subtitle{}
+\author{Enric San Bartolomé Ferri \\ \texttt{e.sanbartolomeferr@edu.gva.es}}
+\setbeamertemplate{date}{} % Oculta la fecha
+
+
+% -------------------------
+\begin{document}
+%----------------------------------------
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+%----------------------------------------
+\begin{frame}{Índice}
+    \tableofcontents
+\end{frame}
+%----------------------------------------
+
+\section{Introducción}
+\begin{frame}[t]{Introducción}
+    Una placa virgen, consiste en una planca de base aislante (baquelita), que servirá de soporte, y sobre una de las capas o las dos, una fina capa de cobre.
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.45\linewidth]{img/placas_baquelita_capas.png}
+    \end{figure}
+\end{frame}
+%----------------------------------------
+
+\begin{frame}[t]{Introducción}
+    Sobre esta capa actuaremos para hacer desaparecer todo el cobre sobrante y que queden nada más las pistas que configuran el circuito.
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.35\linewidth]{img/placa_virgen.png}
+    \end{figure}
+\end{frame}
+
+%----------------------------------------
+\section{Normas de diseño para una realización manual}
+\begin{frame}[t]{Normas de diseño}
+    Se trata de realizar un diseño lo más sencillo posible, cuanto más cortas sean las pistas y más simple la distribución, mejor resultará el diseño.\\
+    No se realizarán pistas con ángulos de $90^o$, cuando sea necesario efectuar un giro en una pista se hará con ángulos de $135^o$. Si es necesario realizar una bifurcación en la pista, se hará suavizando los ángulos con sendos triángulos a cada lado.
+    \begin{figure}
+        \centering
+        \begin{minipage}{0.45\textwidth}
+            \centering
+            \includegraphics[width=0.85\textwidth]{img/dibujos_pistas.png}
+            
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.45\textwidth}
+            \centering
+            \includegraphics[width=0.85\textwidth]{img/dibujos_pistas2.png}
+            
+        \end{minipage}
+    \end{figure}
+
+\end{frame}
+
+
+\begin{frame}[t]{Normas de diseño}
+    Entre pistas próximas y puntos de soldadura, como norma general, se dejará una distancia mínima de unos $0,8 mm$; en casos de diseños complejos, se podrá disminuir hasta $0,4 mm$.\\ En algunas ocasiones será preciso cortar una porción de ciertos puntos de soldadura para que se cumpla esta norma.
+    \begin{figure}
+        \centering
+        \begin{minipage}{0.45\textwidth}
+            \centering
+            \includegraphics[width=0.8\textwidth]{img/dibujos_pistas3.png}
+            
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.45\textwidth}
+            \centering
+            \includegraphics[width=0.8\textwidth]{img/dibujos_pistas4.png}
+            
+        \end{minipage}
+    \end{figure}
+
+
+\end{frame}
+%----------------------------------------
+\section{Herramientas y materiales necesarios}
+\begin{frame}[t]{Herramientas y materiales necesarios}
+    \begin{columns}
+        \begin{column}{0.55\textwidth}
+            \begin{itemize}
+                \item Agua oxigenada de 100 volúmenes
+                \item Salfumán
+                \item Bandeja de plástico
+                \item Rotulador de tinta permanente resistente al ataque de ácido
+                \item Soldador electrónico
+                \item Estaño
+                \item Placa virgen de circuito impreso
+                \item Taladro con broca de 1mm
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.45\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=0.8\textwidth]{img/materiales_necesarios.png}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+
+%----------------------------------------
+\section{Diseño y construcción del circuito impreso}
+\subsection{Esquemático}
+\begin{frame}[t]{Diseño y construcción del circuito impreso}
+    En primer lugar, hay que analizar el esquemático del circuito impreso a realizar:
+
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.6\linewidth]{img/reloj_digital_esquematico.pdf}
+    \end{figure}
+\end{frame}
+
+%----------------------------------------
+\subsection{Pistas del circuito impreso}
+\begin{frame}[t]{Diseño y construcción del circuito impreso}
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.35\linewidth]{img/reloj_digital_pistas_ampliado.png}
+    \end{figure}
+\end{frame}
+
+
+%----------------------------------------
+
+\begin{frame}[t]{Diseño y construcción del circuito impreso}
+    En primer lugar, hay que posicionar la plantilla de las pistas sobre la placa de circuito impreso y asegurarla utilizando celo. A continuación, utilizando el taladro y la broca metálica de 1mm realizar todos los agujeros siguiendo la plantilla.
+    \begin{figure}
+        \centering
+        \begin{minipage}{0.49\textwidth}
+            \centering
+            \includegraphics[width=1\textwidth]{img/plantilla_y_placa_virgen.png}
+            
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\textwidth}
+            \centering
+            \includegraphics[width=1\textwidth]{img/plantilla_y_placa_virgen_agujereada.png}
+            
+        \end{minipage}
+    \end{figure}
+\end{frame}
+
+
+
+%----------------------------------------
+
+\begin{frame}[t]{Diseño y construcción del circuito impreso}
+    Una vez realizados todos los agujeros de la plantilla, limpiar la placa de cobre dejándola libre de todo tipo de suciedad y con el rotulador de tinta permanente resistente al ácido realizar todas las pistas siguiendo los dibujos de la plantilla.
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.5\linewidth]{img/plantilla_y_placa_con_dibujos.png}
+    \end{figure}
+
+\end{frame}
+
+%----------------------------------------
+
+\begin{frame}[t]{Diseño y construcción del circuito impreso}
+    \begin{itemize}
+        \item A continuación se procede al atacado del ácido. Para ello, se realizará una mezcla de salfumán,  agua oxigenada de 100 volúmenes y agua de grifo a partes iguales.
+    \end{itemize}
+    \begin{alertblock}{!CUIDADO!}
+        El ácido obtenido es muy corrosivo. Si no se maneja con cuidado puede provocar deterioros en la piel o la ropa, por lo que debe prestarse la máxima atención cuando se manipule. Además debe realizarse en un sitio con abundante agua y muy bien ventilado.
+    \end{alertblock}
+    \begin{itemize}
+        \item Sitúa el ácido sobre una cubeta de plástico y se introduce la placa. Dejar actuar la mezcla dando un ligero movimiento a la cubeta observando la placa. Una vez que ha desaparecido todo el cobre, retirar la placa con cuidado y colocarla debajo de un grifo con agua abundante.
+    \end{itemize}
+\end{frame}
+
+
+%----------------------------------------
+
+\begin{frame}[t]{Diseño y construcción del circuito impreso}
+    Cuando ya está seca la placa, se elimina la tinta que cubre el cobre, para ello, se puede utilizar disolvente o un estropajo. Una vez seca se puede depositar una fina capa de barniz protector soldable para evitar que se oxiden las pistas.
+\end{frame}
+
+%----------------------------------------
+
+\begin{frame}[t]{Diseño y construcción del circuito impreso}
+    
+\end{frame}
+
+%----------------------------------------
+\section{Montaje de los componentes}
+\begin{frame}{Montaje de los componentes}
+    
+\end{frame}
+
+%----------------------------------------
+
+\begin{frame}{Materiales}
+    
+\end{frame}
+
+
+
+\end{document}

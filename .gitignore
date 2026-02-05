@@ -1,7 +1,9 @@
 *.fls
 *.fdb_latexmk
-*.pdf
 *.log
 *.out
 *.aux
 *.synctex.gz
+*.nav
+*.snm
+*.toc

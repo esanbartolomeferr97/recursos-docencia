@@ -1,0 +1,67 @@
+\documentclass[a4paper,11pt]{article}
+
+% Importar preamble de prácticas
+\input{../../../Plantillas/preamble-practicas.tex}
+
+
+
+% -------------------------
+\begin{document}
+
+\begin{center}
+    \Huge \textbf{Práctica 6. Circuito rectificador de onda completa.} \\[0.5cm]
+\end{center}
+
+\noindent \large Fecha: \\
+\large Nombre alumno:\\
+
+\begin{tcolorbox}[mybox, title= Ejercicio 1]
+Monta el siguiente circuito en el Tinkercad. Visualiza tanto la señal de entrada y de salida del circuito.
+\end{tcolorbox}
+
+\vspace{0.5cm}
+
+\begin{center}
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.6\linewidth]{img/ful_wave.png}
+    \end{figure}
+\end{center}
+
+
+
+
+\begin{tcolorbox}[mybox, title= Ejercicio 2]
+Monta el siguiente circuito en el Tinkercad. Visualiza tanto la señal de entrada y de salida del circuito. Realiza diferentes pruebas con condensadores de: $C_1= 10\mu F$ y $C_2= 100\mu F$
+\end{tcolorbox}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\linewidth]{img/full_wave_capacitor.png}
+\end{figure}
+
+
+\begin{tcolorbox}[mybox, title= Ejercicio 3]
+Monta el circuito del ejercicio 1 en una placa protoboard y utilizando el osciloscopio realiza una comparación de la señal de entrada y la de salida.
+\end{tcolorbox}
+
+\vspace{2cm}
+
+    \begin{tikzpicture}[scale=1.5]
+    
+        % Marco de pantalla
+        \draw[rounded corners=8pt, thick] (-5,-3.5) rectangle (5,3.5);
+    
+        % Cuadrícula fina
+        \draw[step=0.5cm,gray!40] (-4.5,-3) grid (4.5,3);
+    
+        % Cuadrícula gruesa
+        \draw[step=1cm,gray!70,thick] (-4.5,-3) grid (4.5,3);
+    
+        % Ejes
+        \draw[->, thick] (-4.5,0) -- (4.5,0) node[right] {};
+        \draw[->, thick] (0,-3) -- (0,3) node[above] {};
+    
+    \end{tikzpicture}
+
+\end{document}

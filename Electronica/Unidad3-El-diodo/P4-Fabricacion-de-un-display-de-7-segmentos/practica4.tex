@@ -1,0 +1,133 @@
+\documentclass[a4paper,11pt]{article}
+
+% Importar preamble de prácticas
+\input{../../../Plantillas/preamble-practicas.tex}
+
+
+
+\begin{document}
+
+\begin{center}
+    \Huge \textbf{Práctica 4. Fabricación de un \textit{display} de 7 segmentos.} \\[0.5cm]
+\end{center}
+
+\noindent \large Fecha: \\
+\large Nombre alumno:\\
+
+\begin{tcolorbox}[mybox, title= Objetivo de la práctica]
+El objetivo de esta práctica es fabricar un display de 7 segmentos utilizando una estructura impresa en 3D y que posteriormente se controlará mediante una placa Arduino con la finalidad de construir un reloj funcional. Se dispone de una configuración de 21 diodos LED conectados en cátodo común.
+\end{tcolorbox}
+
+\vspace{0.5cm}
+
+\begin{center}
+\begin{circuitikz}[scale=0.9, transform shape]
+
+    %%%%% LEDS L1 %%%%%%
+    \draw (1,11) to (1,15) to[resistor, l^={$R = 100 \Omega$}] (-2,15) node[fill=black, circle, inner sep=2pt] (L7) {} node[left]{L1};
+
+    \draw (1,15) to (2,15) to [led] (2,14) to (3,14);
+    \draw (1,13) to (2,13) to [led] (2,12) to (3,12);
+    \draw (1,11) to (2,11) to [led] (2,10) to (3,10);
+
+    \draw (3,16) to (3,0);
+
+    %%%%% LEDS L2 %%%%%%
+    \draw (3.5,17) to (10,17) to[resistor, l^={$R = 100 \Omega$}] (13,17) node[fill=black, circle, inner sep=2pt] (L7) {} node[right]{L2};
+    
+    \draw (3.5,17) to[led] (3.5,16);
+    \draw (5.5,17) to[led] (5.5,16);
+    \draw (7.5,17) to[led] (7.5,16);
+
+    \draw (3,16) to (7,16);
+
+    \draw (3,16) to (8,16) to (8,0);
+
+    %%%%% LEDS L3 %%%%%%
+    \draw (10,11) to (10,15) to[resistor, l^={$R = 100 \Omega$}] (13,15) node[fill=black, circle, inner sep=2pt] (L7) {} node[right]{L3};
+    
+    \draw (10,15) to (9,15) to [led] (9,14) to (8,14);
+    \draw (10,13) to (9,13) to [led] (9,12) to (8,12);
+    \draw (10,11) to (9,11) to [led] (9,10) to (8,10);
+
+
+    %%%%% LEDS L4 %%%%%%
+    \draw (5.5,9) to[resistor, l^={$R = 100 \Omega$}] (5.5,11) node[fill=black, circle, inner sep=2pt] (L7) {} node[right]{L4};
+    
+    \draw (3.5,9) to (7.5,9);
+    
+    \draw (3.5,9) to[led] (3.5,8);
+    \draw (5.5,9) to[led] (5.5,8);
+    \draw (7.5,9) to[led] (7.5,8);
+
+    \draw (3,8) to (8,8);
+
+    %%%%% LEDS L5 %%%%%%
+    \draw (10,3) to (10,7) to[resistor, l^={$R = 100 \Omega$}] (13,7) node[fill=black, circle, inner sep=2pt] (L7) {} node[right]{L5};
+    
+    \draw (10,7) to (9,7) to [led] (9,6) to (8,6);
+    \draw (10,5) to (9,5) to [led] (9,4) to (8,4);
+    \draw (10,3) to (9,3) to [led] (9,2) to (8,2);
+
+    %%%%%% LEDS L6 %%%%%%
+    \draw (5.5,3) node[fill=black, circle, inner sep=2pt] (L6) {} node[left]{L6} to[resistor, l_={$R = 100 \Omega$}, l^={$R = 100 \Omega$}] (5.5,1) -- (7.5,1) to (3.5,1);
+    
+    \draw (3.5,1) to[led] (3.5,0);
+    \draw (5.5,1) to[led] (5.5,0);
+    \draw (7.5,1) to[led] (7.5,0);
+
+    \draw (3,0) to (8,0);
+    
+    %%%%% LEDS L7 %%%%%%
+    \draw (-2,7) node[fill=black, circle, inner sep=2pt] (L7) {} node[left]{L7} to[resistor, l_={$R = 100 \Omega$}] (1,7) to (1,3) ;
+
+    \draw (1,7) to (2,7) to [led] (2,6) to (3,6);
+    \draw (1,5) to (2,5) to [led] (2,4) to (3,4);
+    \draw (1,3) to (2,3) to [led] (2,2) to (3,2);
+
+    %%%%% GND %%%%%%
+    \draw (5.5,8) to (5.5,7) node[fill=black, circle, inner sep=2pt] (L7) {} node[left]{GND} ;
+
+\end{circuitikz}
+\end{center}
+
+
+\begin{tcolorbox}[mybox, title=Pasos a seguir para realizar el montaje:]
+
+
+\begin{enumerate}
+    \item Identificar todos los materiales necesarios para el proyecto.
+    \item Revisar el circuito esquemático, identificar los materiales necesarios y puntos de conexión.
+    \item Conectar todos los diodos en la misma posición (ánodo arriba, cátodo abajo).
+    \item Pegar todos los diodos con cola a la estructura.
+    \item Comprobar que todos los diodos esté en la posición correcta.
+    \item Empezar a soldar las líneas de los ánodos (L1 a L7).
+    \item Soldar todos los cátodos juntos.
+    \item Conectar cables de salida y numerar adecuadamente todas las líneas.
+\end{enumerate}
+\end{tcolorbox}
+
+\vspace{1cm}
+
+\begin{tcolorbox}[mybox, title=Ejercicio 1]
+Rellena la siguiente tabla con toda la información solicitada:
+\end{tcolorbox}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabularx}{\textwidth}{|X|X|X|}
+        \hline
+        Color del diodo LED & $V_{LED}$ & ¿Cuántos diodos LED se han quemado en el proceso? \\
+        \hline
+         \rule{0pt}{1cm}  & &  \\ 
+         \hline
+    \end{tabularx}
+\end{table}
+
+\begin{tcolorbox}[mybox, title=Ejercicio 2]
+Una vez terminado el proceso de fabricación hay que realizar un documento explicativo con toda la información relevante del proyecto.
+
+\end{tcolorbox}
+
+
+\end{document}

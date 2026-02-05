@@ -1,0 +1,91 @@
+\documentclass[a4paper,11pt]{article}
+
+% Importar preamble de prácticas
+\input{../../../Plantillas/preamble-practicas.tex}
+
+\begin{document}
+
+\begin{center}
+    \Huge \textbf{Práctica 3: Ajuste de tensión con potenciómetro.} \\[0.5cm]
+\end{center}
+
+\noindent \large Fecha: \\
+\large Nombre alumno:\\
+
+\begin{tcolorbox}[mybox, title=Ejercicio 1]
+Realiza el montaje del siguiente circuito divisor de tensión para comprobar el funcionamiento del potenciómetro para realizar un ajuste de tensión a la salida deseada. Anota el valor de tensión obtenido en la tabla:
+\end{tcolorbox}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/potenciometro.png}
+    \label{fig:resistencias_serie}
+\end{figure}
+
+\begin{table}[h!]
+    \Large
+    \centering
+    \renewcommand{\arraystretch}{1.6}
+    \begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}X|
+                                 >{\centering\arraybackslash}X| >{\centering\arraybackslash}X|}
+        \hline
+        \textbf{$V_{R=1k\Omega}$} & \textbf{$V_{R=5k\Omega}$} & $I_T$ \\
+        \hline
+         & & \\
+         \hline
+    \end{tabularx}
+    \label{tab:potenciometro_tension}
+\end{table}
+
+\newpage
+
+\begin{tcolorbox}[mybox, title=Ejercicio 2]
+Monta el circuito del ejercicio 1 en la placa protooboard. Varía el valor del potenciómetro (entre el máximo, el mínimo y dos valores intermedios) y comprueba el valor de tensión de salida.
+\end{tcolorbox}
+
+\begin{table}[h!]
+    \Large
+    \centering
+    \renewcommand{\arraystretch}{1.6}
+    \begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}X|
+                                 >{\centering\arraybackslash}X|}
+        \hline
+        \textbf{Posición del potenciómetro $(\Omega)$} & \textbf{Tensión de salida (V)} \\
+        \hline
+         &  \\
+        \hline
+         &  \\
+        \hline
+        &  \\
+        \hline 
+         &  \\
+        \hline
+    \end{tabularx}
+    \label{tab:potenciometro_tension}
+\end{table}
+
+\begin{tcolorbox}[mybox, title=Ejercicio 3]
+Cambia el potenciómetro por otro de $1k\Omega$. ¿Qué ocurre en este caso con el valor máximo de tensión en el punto de medida?
+\end{tcolorbox}
+
+\begin{table}[h!]
+    \Large
+    \centering
+    \renewcommand{\arraystretch}{1.6}
+    \begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}X|
+                                 >{\centering\arraybackslash}X|}
+        \hline
+        \textbf{Posición del potenciómetro} & \textbf{Tensión de salida (V)} \\
+        \hline
+         &  \\
+        \hline
+         &  \\
+        \hline
+    \end{tabularx}
+    \label{tab:potenciometro_tension}
+\end{table}
+
+
+
+
+\end{document}

@@ -1,0 +1,110 @@
+\documentclass[a4paper,11pt]{article}
+
+% Importar preamble de prácticas
+\input{../../../Plantillas/preamble-practicas.tex}
+
+\begin{document}
+
+\begin{center}
+    \Huge \textbf{Práctica 2: Simulación y montaje de circuitos mixtos.} \\[0.5cm]
+\end{center}
+
+\noindent \large Fecha: \\
+\large Nombre alumno:\\
+
+\begin{tcolorbox}[mybox, title=Ejercicio 1]
+Utiliza Tinkercad como software de simulación electrónica y realiza el diseño del circuito mixto propuesto a continuación y anota los resultados en la tabla:
+\end{tcolorbox}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{img/circuito mixto.png}
+    \label{fig:resistencias_serie}
+\end{figure}
+
+
+\begin{table}[h!]
+    \Large
+    \centering
+    \renewcommand{\arraystretch}{1.6}
+    \begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}X|
+                                 >{\centering\arraybackslash}X|
+                                 >{\centering\arraybackslash}X|
+                                 >{\centering\arraybackslash}X|
+                                 >{\centering\arraybackslash}X|
+                                 >{\centering\arraybackslash}X|
+                                 >{\centering\arraybackslash}X|}
+        \hline
+        \multicolumn{3}{|c|}{\textbf{Tensión}} & 
+        \multicolumn{4}{c|}{\textbf{Intensidad}} \\
+        \hline
+        \textbf{$V_1$} & \textbf{$V_2$} & \textbf{$V_3$} & \textbf{$I_T$} & \textbf{$I_1$} & \textbf{$I_2$} & \textbf{$I_3$} \\
+        \hline
+        & & & & & & \\
+        \hline
+    \end{tabularx}
+    \label{tab:tension_intensidad}
+\end{table}
+
+\begin{table}[h!]
+    \Large
+    \centering
+    \renewcommand{\arraystretch}{1.6}
+    \begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}X|
+                                 >{\centering\arraybackslash}X|}
+        \hline
+        \textbf{Resistencia total} & \textbf{Resistencia circuito paralelo} \\
+        \hline
+         &  \\
+        \hline
+    \end{tabularx}
+    \label{tab:resistencias_equivalentes}
+\end{table}
+
+
+
+\begin{tcolorbox}[mybox, title=Ejercicio 2]
+Monta el circuito del Ejercicio 1 en la placa protoboard. Utiliza un multímetro para realizar las medidas correspondientes para rellenar la tabla y comprar los resultados.
+\end{tcolorbox}
+
+
+\begin{table}[h!]
+    \Large
+    \centering
+    \renewcommand{\arraystretch}{1.6}
+    \begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}X|
+                                 >{\centering\arraybackslash}X|
+                                 >{\centering\arraybackslash}X|
+                                 >{\centering\arraybackslash}X|
+                                 >{\centering\arraybackslash}X|
+                                 >{\centering\arraybackslash}X|
+                                 >{\centering\arraybackslash}X|}
+        \hline
+        \multicolumn{3}{|c|}{\textbf{Tensión}} & 
+        \multicolumn{4}{c|}{\textbf{Intensidad}} \\
+        \hline
+        \textbf{$V_1$} & \textbf{$V_2$} & \textbf{$V_3$} & \textbf{$I_T$} & \textbf{$I_1$} & \textbf{$I_2$} & \textbf{$I_3$} \\
+        \hline
+        & & & & & & \\
+        \hline
+    \end{tabularx}
+    \label{tab:tension_intensidad}
+\end{table}
+
+
+\begin{table}[h!]
+    \Large
+    \centering
+    \renewcommand{\arraystretch}{1.6}
+    \begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}X|
+                                 >{\centering\arraybackslash}X|}
+        \hline
+        \textbf{Resistencia total} & \textbf{Resistencia circuito paralelo} \\
+        \hline
+         &  \\
+        \hline
+    \end{tabularx}
+    \label{tab:resistencias_equivalentes}
+\end{table}
+
+\end{document}

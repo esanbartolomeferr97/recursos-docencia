@@ -1,0 +1,49 @@
+% =============================================================================
+% PREAMBLE PARA DOCUMENTOS DE PRÁCTICAS
+% =============================================================================
+% Este preamble está diseñado para hojas de prácticas y ejercicios
+% Incluye cajas personalizadas, tablas, y formato para trabajo de laboratorio
+
+% --- Paquetes básicos ---
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{array}
+
+% --- Geometría de página ---
+\usepackage{geometry}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+
+% --- Cajas y diseño ---
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+
+% --- Estilo para títulos ---
+\usepackage{titlesec}
+\titleformat{\section}{\bfseries\large}{\thesection}{1em}{}
+\titleformat{\subsection}{\bfseries}{\thesubsection}{1em}{}
+
+% --- Cabecera y pie de página ---
+% NOTA: Personaliza \rhead en cada documento según la asignatura
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Prácticas}
+% \rhead se define en cada documento individual
+\cfoot{\thepage}
+
+% --- Estilo de caja para ejercicios (blanco y negro) ---
+\tcbset{
+  mybox/.style={
+    colback=white,           % fondo blanco
+    colframe=black,          % borde negro
+    fonttitle=\bfseries,
+    boxrule=0.8pt,           % grosor del borde
+    arc=3mm,                 % esquinas redondeadas
+    enhanced,
+    sharp corners=downhill,  % estilo limpio
+  }
+}

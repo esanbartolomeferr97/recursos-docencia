@@ -1,0 +1,33 @@
+% =============================================================================
+% PREAMBLE PARA PRESENTACIONES BEAMER
+% =============================================================================
+% Este preamble está diseñado para crear presentaciones con Beamer
+% Incluye paquetes comunes para circuitos, gráficos, y matemáticas
+
+% --- Paquetes básicos ---
+\usepackage{pgfplots}
+\usepackage{circuitikz}[americanresistors]
+\usepackage{siunitx}
+
+% --- Tema y configuración de Beamer ---
+\usetheme{Madrid}
+\usecolortheme{whale}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+
+% --- Ocultar fecha por defecto ---
+\setbeamertemplate{date}{}
+
+% --- Numeración del índice ---
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{subsection in toc}[subsections numbered]
+
+% --- Mostrar índice al inicio de cada subsección ---
+\AtBeginSubsection[]{
+  \begin{frame}{Índice}
+    \tableofcontents[
+      currentsection,
+      currentsubsection
+    ]
+  \end{frame}
+}

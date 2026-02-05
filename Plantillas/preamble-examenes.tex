@@ -1,0 +1,42 @@
+% =============================================================================
+% PREAMBLE PARA EXÁMENES
+% =============================================================================
+% Este preamble usa la clase 'exam' y está diseñado para crear exámenes
+% con preguntas tipo test, desarrollo, y tablas de respuestas
+
+% --- Paquetes básicos ---
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1.5in]{geometry}
+\usepackage{exams}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{multirow}
+
+% --- Colores personalizados ---
+\definecolor{headercolor}{RGB}{60, 120, 216}
+\definecolor{rowcolor}{RGB}{230, 240, 255}
+\definecolor{textcolor}{RGB}{0, 0, 0}
+
+% --- Cabecera y pie de página ---
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+
+% NOTA: \fancyhead[L] y \fancyhead[R] se personalizan en cada documento
+% según la asignatura y el logo que uses
+
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+\fancyfoot[C]{\thepage}
+
+% Aumentar el tamaño del encabezado y la separación del texto
+\setlength{\headheight}{40pt}
+\setlength{\headsep}{30pt}
+
+% --- Configuración de puntos ---
+\renewcommand{\points}{p}
